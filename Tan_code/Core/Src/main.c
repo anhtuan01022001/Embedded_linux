@@ -111,6 +111,20 @@ int main(void)
   LCD_Puts("Enter reset ");
   delay_ms(1000);
   LCD_Clear();
+  uint8_t degreeSymbol[8] = {
+	    0b00110,
+	    0b01001,
+	    0b01001,
+	    0b00110,
+	    0b00000,
+	    0b00000,
+	    0b00000,
+	    0b00000
+	  };
+  LCD_SendCommand(0x40); // Đặt địa chỉ bộ nhớ đặc biệt cho ký tự đầu tiên (0x40)
+    for (int i = 0; i < 8; i++) {
+      LCD_PutChar(degreeSymbol[i]);
+    }
   while (1)
   {
     /* USER CODE END WHILE */
@@ -132,7 +146,8 @@ int main(void)
     LCD_PutChar((n % 100) / 10 + 48);
     LCD_PutChar('.');
     LCD_PutChar(n % 10 + 48);
-    LCD_Puts(" *C");
+    LCD_PutChar(0);
+    LCD_Puts("C");
 
     delay_ms(500);
   }
