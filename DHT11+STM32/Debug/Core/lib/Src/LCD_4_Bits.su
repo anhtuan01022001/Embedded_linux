@@ -1,0 +1,10 @@
+../Core/lib/Src/LCD_4_Bits.c:26:6:GPIO_LCD_Init	32	static
+../Core/lib/Src/LCD_4_Bits.c:42:6:GPIO_OUTPUT	16	static
+../Core/lib/Src/LCD_4_Bits.c:50:6:LCD_Enable	8	static
+../Core/lib/Src/LCD_4_Bits.c:59:6:LCD_Send4Bit	16	static
+../Core/lib/Src/LCD_4_Bits.c:91:6:LCD_SendCommand	16	static
+../Core/lib/Src/LCD_4_Bits.c:98:6:LCD_Clear	8	static
+../Core/lib/Src/LCD_4_Bits.c:103:6:LCD_Init	8	static
+../Core/lib/Src/LCD_4_Bits.c:127:6:LCD_Gotoxy	24	static
+../Core/lib/Src/LCD_4_Bits.c:138:6:LCD_PutChar	16	static
+../Core/lib/Src/LCD_4_Bits.c:145:6:LCD_Puts	16	static
