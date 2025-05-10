@@ -2,7 +2,7 @@
 
 ## 🧠 Mục tiêu học tập
 
-Đây là repo cá nhân ghi lại quá trình học tập và thực hành các kiến thức nền tảng về **Linux**, tập trung vào:
+Đây là repo cá nhân ghi lại quá trình học tập và thực hành các kiến thức nền tảng về **Embedded Linux**, tập trung vào:
 
 - Sử dụng **GCC (GNU Compiler Collection)** để biên dịch mã nguồn C/C++.
 - Tạo và sử dụng **thư viện tĩnh (Static Library)**.
