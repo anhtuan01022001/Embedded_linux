@@ -32,7 +32,7 @@ int main() {
     for (int i = 0; i < NUM_THREADS; i++) {
         pthread_join(threads[i], NULL);
     }
-
+    
     printf("All threads completed.\n");
     return 0;
 }
