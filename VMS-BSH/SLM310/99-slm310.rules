@@ -1,0 +1,7 @@
+# Meig SLM310-G modem - auto bind to option and qmi_wwan
+
+# Bind option driver for ttyUSB ports
+ATTR{idVendor}=="2dee", ATTR{idProduct}=="4d41", RUN+="/sbin/modprobe option", RUN+="/bin/sh -c 'echo 2dee 4d41 > /sys/bus/usb-serial/drivers/option1/new_id'"
+
+# Bind qmi_wwan driver for cdc-wdm
+ATTR{idVendor}=="2dee", ATTR{idProduct}=="4d41", RUN+="/sbin/modprobe qmi_wwan", RUN+="/bin/sh -c 'echo 2dee 4d41 > /sys/bus/usb/drivers/qmi_wwan/new_id'"

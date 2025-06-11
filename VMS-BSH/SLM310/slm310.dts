@@ -1,0 +1,20 @@
+&uart2 {
+    status = "okay";
+    pinctrl-names = "default";
+    pinctrl-0 = <&uart2_pins>;
+    current-speed = <115200>;
+
+    slm310 {
+        compatible = "meig,slm310";
+        port-name = "uart2";
+        power-gpios = <&gpio3 15 GPIO_ACTIVE_LOW>; // PWRKEY
+        reset-gpios = <&gpio2 12 GPIO_ACTIVE_LOW>; // RESET_N
+    };
+};
+
+/* Optional: GPIO Regulator for PWRKEY */
+slm310_pwrkey {
+    compatible = "gpio-regulator";
+    regulator-name = "slm310-pwrkey";
+    gpios = <&gpio3 15 GPIO_ACTIVE_LOW>;
+};
