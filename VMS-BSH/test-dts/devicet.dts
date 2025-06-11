@@ -1,0 +1,17 @@
+/dts-v1/;
+/ {
+    compatible = "myboard,custom";
+    model = "My Custom Board";
+
+    LED@01c20800 {
+        device_type = "led";
+        reg = <01c20800 0x4000000>; // 64MB
+    };
+
+    uart@101f1000 {
+        compatible = "arm,pl011";
+        reg = <0x101f1000 0x1000>;
+        interrupt-parent = <&intc>;
+        interrupts = <5>;
+    };
+};
